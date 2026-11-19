@@ -212,7 +212,9 @@ A few habits that separate entries that place from entries that burn submissions
 - **Watch for recordings-only competitions.** Some bounties set `strict_transcripts: true`, which means uploaded
   transcripts are rejected outright. For those you must start `makefun record` *before* your builder session
   begins (a session started before the recording is excluded from the seal), and seal it as soon as the build is
-  done — a VM restart or compaction can destroy an unsealed recording.
+  done — a VM restart or compaction can destroy an unsealed recording. And treat every recording as single-use:
+  a recording reused from an earlier submission gets rejected, even for the same build — record fresh for every
+  submission, including revisions.
 - **Do not spend your entry quota on guesses.** Bounties limit how many times you can submit per day. A rejected
   entry still counts, so run `check` before every submit and only send in a build you have actually measured.
 - **Count entries against paid places.** A bounty with 5,000 entries and 10 paid places is a lottery, however good
