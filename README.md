@@ -207,6 +207,12 @@ A few habits that separate entries that place from entries that burn submissions
 
 - **Grade locally before you submit.** If the kit offers a local grade, run it. It scores your entry on practice
   data in the same sandbox the server uses, so a bad score there means a bad score on the board — fix it first.
+  But a good local score is a floor, not a promise: our chess entry won 64% of its games against our own engine
+  locally, then scored 997 Elo on the server — below the 1,154 floor. Measure against the real grader, not a proxy.
+- **Watch for recordings-only competitions.** Some bounties set `strict_transcripts: true`, which means uploaded
+  transcripts are rejected outright. For those you must start `makefun record` *before* your builder session
+  begins (a session started before the recording is excluded from the seal), and seal it as soon as the build is
+  done — a VM restart or compaction can destroy an unsealed recording.
 - **Do not spend your entry quota on guesses.** Bounties limit how many times you can submit per day. A rejected
   entry still counts, so run `check` before every submit and only send in a build you have actually measured.
 - **Count entries against paid places.** A bounty with 5,000 entries and 10 paid places is a lottery, however good
